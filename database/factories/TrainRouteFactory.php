@@ -17,15 +17,15 @@ class TrainRouteFactory extends Factory
     public function definition()
     {
         return [
-            'azienda' => faker->company,
-            'stazione di partenza' => faker->city,
-            'stazione di arrivo'=> faker->city,
-            'orario di partenza'=> faker->unixTime(),
-            'orario di arrivo'=> faker->unixTime(),
-            'codice treno'=> faker->unique()->randomNumber(4),
-            'numero carrozze'=> faker->numberBetween(0, 100),
-            'in orario'=> faker->boolean,
-            'cancellato'=> faker->boolean,
+            'azienda' => fake()->company,
+            'stazione di partenza' => fake()->city,
+            'stazione di arrivo'=> fake()->city,
+            'orario di partenza'=> fake()->dateTime(),
+            'orario di arrivo'=> fake()->dateTime(),
+            'codice treno'=> fake()->unique()->randomNumber(4),
+            'numero carrozze'=> fake()->numberBetween(0, 100),
+            'in orario'=> fake()->boolean,
+            'cancellato'=> fake()->boolean,
             
         ];
     }

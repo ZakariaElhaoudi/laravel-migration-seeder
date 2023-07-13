@@ -16,6 +16,6 @@ class TrainRouteSeeder extends Seeder
      */
     public function run()
     {
-        factory(TrainRoute::class, 20)->create();
+        TrainRoute :: factory() -> count(100) -> create();
     }
 }
