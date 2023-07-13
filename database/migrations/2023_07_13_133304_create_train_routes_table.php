@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('codice treno');
             $table->integer('numero carrozze');
             $table->boolean('in orario')->default(true);
-            $table->boolean('cancellato')->default(true);
+            $table->boolean('cancellato')->default(false);
             
 
             $table->timestamps();
